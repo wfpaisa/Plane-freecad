@@ -1,0 +1,11 @@
+[Icon Theme]
+Name=FC_COIL_LAS_demo
+Comment=COIL icon theme pack
+Inherits=FreeCAD-default
+Directories=scalable
+
+[scalable]
+Size=64
+Type=Scalable
+MinSize=1
+MaxSize=256
