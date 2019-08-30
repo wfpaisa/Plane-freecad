@@ -1,4 +1,7 @@
 
+* {
+    color: #C7D3DE;
+}
 
 /*==================================================================================================
 Group box
@@ -15,7 +18,6 @@ QGroupBox:title {
     top: -8px;
     left: 12px;
 }
-
 
 
 
@@ -47,12 +49,12 @@ QMenu::item:pressed {
 QMenu::right-arrow {
     width: 10px;
     height: 10px;
-    image:url(qss:images/right_arrow_dark.png);
+    image:url(qss:images/right_arrow_light.svg);
     margin-right: 2px;
 }
 
 QMenu::right-arrow:selected {
-    image:url(qss:images/right_arrow_lighter.png);
+    image:url(qss:images/right_arrow_lighter.svg);
 }
 
 QMenu::item {
@@ -157,7 +159,7 @@ QSint--ActionGroup QToolButton[class="header"] {
 
 QSint--ActionGroup QFrame[class="header"] QLabel {
     background-color: transparent;
-    background-image: url(qss:images/down_arrow_light.png);
+    background-image: url(qss:images/down_arrow_light.svg);
     background-repeat: none;
     background-position: center center;
     padding: 0px;
@@ -166,12 +168,12 @@ QSint--ActionGroup QFrame[class="header"] QLabel {
 
 QSint--ActionGroup QFrame[class="header"] QLabel:hover {
     background-color: transparent;
-    background-image: url(qss:images/down_arrow_lighter.png);
+    background-image: url(qss:images/down_arrow_lighter.svg);
 }
 
 QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
     background-color: transparent;
-    background-image: url(qss:images/up_arrow_light.png);
+    background-image: url(qss:images/up_arrow_light.svg);
     background-repeat: none;
     background-position: center center;
     padding: 0px;
@@ -180,7 +182,7 @@ QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"] {
 
 QSint--ActionGroup QFrame[class="header"] QLabel[fold="true"]:hover {
     background-color: transparent;
-    background-image: url(qss:images/up_arrow_lighter.png);
+    background-image: url(qss:images/up_arrow_lighter.svg);
 }
 
 QSint--ActionGroup QFrame[class="content"] {
@@ -221,3 +223,536 @@ QSint--ActionGroup QFrame[class="content"] > QWidget > QPushButton {
     margin: 0px;
 }
 
+
+/*==================================================================================================
+Dock widget
+==================================================================================================*/
+QDockWidget {
+    color: rgba(255,255,255,120);
+    titlebar-close-icon: url(qss:images/close_light.svg);
+    titlebar-normal-icon: url(qss:images/undock_light.svg);
+}
+
+QDockWidget::title {
+    text-align: center;
+    background-color: rgba(0,0,0,20);
+    border: 4px solid #2F333D; /* fix to simulate margin between this :title and tabs */ /* same as main background color */
+    border-radius: 6px; /* bigger than normal due to previous border fix */
+    padding: 4px 0px; /* also needed because of previous border fix */
+}
+
+QDockWidget::close-button,
+QDockWidget::float-button {
+    border: none;
+    background: transparent;
+    border-radius: 3px;
+    subcontrol-origin: padding;
+    subcontrol-position: right center;
+}
+
+QDockWidget::close-button {
+    right: 4px;
+}
+
+QDockWidget::float-button {
+    right: 22px;
+}
+
+QDockWidget::close-button:hover,
+QDockWidget::float-button:hover {
+    background-color: rgba(255,255,255,15);
+}
+
+QDockWidget::close-button:pressed,
+QDockWidget::float-button:pressed {
+    background-color: rgba(255,255,255,30);
+}
+
+/* fix for Python Console (probably there is a smarter way to arrive to it) */
+QDockWidget > QFrame {
+    background-color: #333742;
+    border: 1px solid #3B404C;
+}
+
+/*==================================================================================================
+Tab bar buttons
+==================================================================================================*/
+/* Close button */
+QTabBar::close-button {
+    subcontrol-origin: margin;
+    subcontrol-position: center right; /* only works for QT 4.6 and newer */;
+    border-radius: 2px;
+    background-image: url(qss:images/close_light.svg);
+    background-position: center center;
+    background-repeat: none;
+}
+
+
+/*==================================================================================================
+Tree and list views
+==================================================================================================*/
+QTreeView,
+QListView,
+QTableView {
+    background-color: #333742;
+    alternate-background-color: #383D4A; /* related with QListView background  */
+    border: 1px solid #3B404C;
+    selection-color: white;
+    selection-background-color: #007EFF; /* should be similar to QListView::item selected background-color */
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+    border-radius: 3px;
+    color: #F0F0F0;
+}
+
+QListView::item:hover,
+QTreeView::item:hover  {
+    background-color: transparent; /* fix to homogenize it on all OSs */
+}
+
+QListView::item:selected,
+QTreeView::item:selected  {
+    color: #F0F0F0; /* should be similar to QListView selection-color */
+    background-color: #007EFF; /* should be similar to QListView selection-background-color */
+    show-decoration-selected: 1; /* make the selection span the entire width of the view */
+}
+
+/* Property Editor QTreeView (FreeCAD custom widget) */
+Gui--PropertyEditor--PropertyEditor {
+    gridline-color: #333742; /* same as Group header background */
+}
+
+/* fix for column items background when a link is present */
+Gui--PropertyEditor--PropertyEditor > QWidget > QFrame:focus {
+    background-color: #008AFF; /* same as focused background color */
+}
+
+/* hack to hide weird redundant information inside the value of a Placement cell */
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel,
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel:disabled {
+    
+    background-color: transparent;
+    border: none;
+    border-radius: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* hack to hide non editable cells inside Property values */
+Gui--PropertyEditor--PropertyEditor QLineEdit:read-only,
+Gui--PropertyEditor--PropertyEditor QLineEdit:disabled,
+Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:read-only,
+Gui--PropertyEditor--PropertyEditor QAbstractSpinBox:disabled {
+   
+    border-color: transparent;
+    background-color: transparent;
+    selection-color: transparent;
+    selection-background-color: transparent;
+}
+
+/* hack to hide weird redundant information inside cells with links and no editable data (but editable via "..." button) */
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QLabel {
+    color: white;
+    background-color: #008AFF;
+}
+
+/* hack to disable margin inside Property values to following elements */
+Gui--PropertyEditor--PropertyEditor QSpinBox,
+Gui--PropertyEditor--PropertyEditor QDoubleSpinBox,
+Gui--PropertyEditor--PropertyEditor QAbstractSpinBox,
+Gui--PropertyEditor--PropertyEditor QLineEdit,
+Gui--PropertyEditor--PropertyEditor QComboBox {
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+/* reset min-height to 0px inside list views */
+QTreeView > QWidget > QComboBox,
+QTreeView > QWidget > QAbstractSpinBox,
+QTreeView > QWidget > QSpinBox,
+QTreeView > QWidget > QDoubleSpinBox,
+QTreeView > QWidget > QLineEdit,
+QTreeView > QWidget > QTextEdit,
+QTreeView > QWidget > QTimeEdit,
+QTreeView > QWidget > QDateEdit,
+QTreeView > QWidget > QDateTimeEdit,
+QTreeView > QWidget > Gui--ColorButton {
+    min-height: 0px;
+}
+
+/* set border-radius to 0px inside list views */
+QTreeView > QWidget > QComboBox,
+QTreeView > QWidget > QAbstractSpinBox,
+QTreeView > QWidget > QSpinBox,
+QTreeView > QWidget > QDoubleSpinBox,
+QTreeView > QWidget > QLineEdit,
+QTreeView > QWidget > QTextEdit,
+QTreeView > QWidget > QTimeEdit,
+QTreeView > QWidget > QDateEdit,
+QTreeView > QWidget > QDateTimeEdit,
+QTreeView > QWidget > QComboBox:drop-down,
+QTreeView > QWidget > QAbstractSpinBox:up-button,
+QTreeView > QWidget > QSpinBox:up-button,
+QTreeView > QWidget > QDoubleSpinBox:up-button,
+QTreeView > QWidget > QTimeEdit:up-button,
+QTreeView > QWidget > QDateEdit:up-button,
+QTreeView > QWidget > QDateTimeEdit:up-button,
+QTreeView > QWidget > QAbstractSpinBox:down-button,
+QTreeView > QWidget > QSpinBox:down-button,
+QTreeView > QWidget > QDoubleSpinBox:down-button,
+QTreeView > QWidget > QTimeEdit:down-button,
+QTreeView > QWidget > QDateEdit:down-button,
+QTreeView > QWidget > QDateTimeEdit:down-button,
+QTreeView > QWidget > Gui--ColorButton {
+    border-radius: 0px;
+}
+
+/* set focus colors to best viewing the editable fields */
+QTreeView > QWidget > QComboBox:focus,
+QTreeView > QWidget > QAbstractSpinBox:focus,
+QTreeView > QWidget > QSpinBox:focus,
+QTreeView > QWidget > QDoubleSpinBox:focus,
+QTreeView > QWidget > QLineEdit:focus,
+QTreeView > QWidget > QTextEdit:focus,
+QTreeView > QWidget > QTimeEdit:focus,
+QTreeView > QWidget > QDateEdit:focus,
+QTreeView > QWidget > QDateTimeEdit:focus {
+    border-color: #008AFF; /* same as focused background color */
+    border-bottom-color: #007AFD; /* same as focused border color */
+}
+
+QTreeView > QWidget > QAbstractSpinBox:read-only,
+QTreeView > QWidget > QSpinBox:read-only,
+QTreeView > QWidget > QDoubleSpinBox:read-only,
+QTreeView > QWidget > QLineEdit:read-only,
+QTreeView > QWidget > QTextEdit:read-only,
+QTreeView > QWidget > QTimeEdit:read-only,
+QTreeView > QWidget > QDateEdit:read-only,
+QTreeView > QWidget > QDateTimeEdit:read-only {
+   
+    background-color: transparent;
+    border-color: transparent;
+}
+
+/* Fix to correctly (not totally) draw QTextEdit on OSX at Page properties: "Page result", "Template" and "Editable Texts" */
+Gui--PropertyEditor--PropertyEditor > QWidget > QWidget > QWidget {
+    min-height: 14px;
+    border-radius: 0px; /* reset */
+}
+
+
+/*==================================================================================================
+Branch system for QTreeViews
+==================================================================================================*/
+QTreeView::branch  {
+    background: transparent;
+}
+
+QTreeView::branch:has-siblings:!adjoins-item  {
+    border-image: url(qss:images/branch_vline_light.svg) 0;
+}
+
+QTreeView::branch:has-siblings:adjoins-item  {
+    border-image: url(qss:images/branch_more_light.svg) 0;
+}
+
+QTreeView::branch:!has-children:!has-siblings:adjoins-item  {
+    border-image: url(qss:images/branch_end_light.svg) 0;
+}
+
+QTreeView::branch:closed:has-children:has-siblings  {
+    border-image: url(qss:images/branch_more_closed_light.svg) 0;
+}
+
+QTreeView::branch:has-children:!has-siblings:closed  {
+    border-image: url(qss:images/branch_end_closed_light.svg) 0;
+}
+
+QTreeView::branch:open:has-children:has-siblings  {
+    border-image: url(qss:images/branch_more_open_light.svg) 0;
+}
+
+QTreeView::branch:open:has-children:!has-siblings  {
+    border-image: url(qss:images/branch_end_open_light.svg) 0;
+}
+
+
+
+
+/*==================================================================================================
+Tables (spreadsheets)
+==================================================================================================*/
+QTableView {
+    gridline-color: #3C414F;
+    selection-color: #1b3774;
+    selection-background-color: #008AFF;
+    color: #F0F0F0;
+}
+
+QTableView::item:hover  {
+    background-color: rgba(0,0,0,10);  /* temporal: is it displayed in Linux or Windows? on OSX it isn't */
+}
+
+QTableView::item:disabled  {
+    color: #ABABAB;
+}
+
+QTableView::item:selected  {
+    color: #1b3774;
+    border-color: #008AFF; /* same as focused background color */
+    border-bottom-color: #007AFD; /* same as focused border color */
+}
+
+/* fix for elements inside the cells */
+QTableView > QWidget > QComboBox,
+QTableView > QWidget > QAbstractSpinBox,
+QTableView > QWidget > QSpinBox,
+QTableView > QWidget > QDoubleSpinBox,
+QTableView > QWidget > QLineEdit,
+QTableView > QWidget > QTextEdit,
+QTableView > QWidget > QTimeEdit,
+QTableView > QWidget > QDateEdit,
+QTableView > QWidget > QDateTimeEdit,
+QTableView > QWidget > QComboBox:drop-down,
+QTableView > QWidget > QAbstractSpinBox:up-button,
+QTableView > QWidget > QSpinBox:up-button,
+QTableView > QWidget > QDoubleSpinBox:up-button,
+QTableView > QWidget > QTimeEdit:up-button,
+QTableView > QWidget > QDateEdit:up-button,
+QTableView > QWidget > QDateTimeEdit:up-button,
+QTableView > QWidget > QAbstractSpinBox:down-button,
+QTableView > QWidget > QSpinBox:down-button,
+QTableView > QWidget > QDoubleSpinBox:down-button,
+QTableView > QWidget > QTimeEdit:down-button,
+QTableView > QWidget > QDateEdit:down-button,
+QTableView > QWidget > QDateTimeEdit:down-button,
+QTableView > QWidget > Gui--ColorButton {
+    border-radius: 0px;
+}
+
+QTableView > QWidget > QComboBox,
+QTableView > QWidget > QAbstractSpinBox,
+QTableView > QWidget > QSpinBox,
+QTableView > QWidget > QDoubleSpinBox,
+QTableView > QWidget > QLineEdit,
+QTableView > QWidget > QTextEdit,
+QTableView > QWidget > QTimeEdit,
+QTableView > QWidget > QDateEdit,
+QTableView > QWidget > QDateTimeEdit {
+    color: #F0F0F0;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+QTableView > QWidget > QComboBox:drop-down,
+QTableView > QWidget > QAbstractSpinBox:up-button,
+QTableView > QWidget > QSpinBox:up-button,
+QTableView > QWidget > QDoubleSpinBox:up-button,
+QTableView > QWidget > QTimeEdit:up-button,
+QTableView > QWidget > QDateEdit:up-button,
+QTableView > QWidget > QDateTimeEdit:up-button,
+QTableView > QWidget > QAbstractSpinBox:down-button,
+QTableView > QWidget > QSpinBox:down-button,
+QTableView > QWidget > QDoubleSpinBox:down-button,
+QTableView > QWidget > QTimeEdit:down-button,
+QTableView > QWidget > QDateEdit:down-button,
+QTableView > QWidget > QDateTimeEdit:down-button,
+QTableView > QWidget > Gui--ColorButton {
+    background-color: rgba(0,0,0,30);
+}
+
+QTableView > QWidget > QComboBox:focus,
+QTableView > QWidget > QAbstractSpinBox:focus,
+QTableView > QWidget > QSpinBox:focus,
+QTableView > QWidget > QDoubleSpinBox:focus,
+QTableView > QWidget > QLineEdit:focus,
+QTableView > QWidget > QTextEdit:focus,
+QTableView > QWidget > QTimeEdit:focus,
+QTableView > QWidget > QDateEdit:focus,
+QTableView > QWidget > QDateTimeEdit:focus {
+    color: #1b3774;
+    selection-color: white;
+    selection-background-color: #007EFF;
+    border-color: #008AFF;
+    background-color: #008AFF;
+}
+
+QTableView > QWidget > QComboBox:disabled,
+QTableView > QWidget > QAbstractSpinBox:disabled,
+QTableView > QWidget > QSpinBox:disabled,
+QTableView > QWidget > QDoubleSpinBox:disabled,
+QTableView > QWidget > QLineEdit:disabled,
+QTableView > QWidget > QTextEdit:disabled,
+QTableView > QWidget > QTimeEdit:disabled,
+QTableView > QWidget > QDateEdit:disabled,
+QTableView > QWidget > QDateTimeEdit:disabled {
+    color: #A6A6A6;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+QTableView > QWidget > QComboBox:read-only,
+QTableView > QWidget > QAbstractSpinBox:read-only,
+QTableView > QWidget > QSpinBox:read-only,
+QTableView > QWidget > QDoubleSpinBox:read-only,
+QTableView > QWidget > QLineEdit:read-only,
+QTableView > QWidget > QTextEdit:read-only,
+QTableView > QWidget > QTimeEdit:read-only,
+QTableView > QWidget > QDateEdit:read-only,
+QTableView > QWidget > QDateTimeEdit:read-only {
+    color: #F0F0F0;
+    background-color: transparent;
+    border-color: transparent;
+}
+
+
+
+/*==================================================================================================
+Splitter and windows separator
+==================================================================================================*/
+QSplitter::handle {
+    margin: 0px 11px;
+    padding: 0px;
+}
+
+QSplitter::handle:horizontal {
+    background-image: url(qss:images/splitter_vertical_light.svg);
+    background-position: center center;
+    background-repeat: none;
+    margin: 4px 2px 4px 2px;
+    width: 2px;
+}
+
+QSplitter::handle:vertical {
+    background-image: url(qss:images/splitter_horizontal_light.svg);
+    background-position: center center;
+    background-repeat: none;
+    margin: 2px 4px 2px 4px;
+    height: 2px;
+}
+
+/* Similar to the splitter is the following window separator (but horizontal/vertical is on the opposite way) */
+QMainWindow::separator {
+    background-position: center center;
+    background-repeat: none;
+}
+
+QMainWindow::separator:horizontal {
+    height: 2px;
+    background-image: url(qss:images/splitter_horizontal_light.svg);
+    margin: 4px 2px 4px 2px;
+}
+
+QMainWindow::separator:vertical {
+    width: 2px;
+    background-image: url(qss:images/splitter_vertical_light.svg);
+    margin: 2px 4px 2px 4px;
+}
+
+
+/*==================================================================================================
+Text/Python editor (macros, etc...)
+==================================================================================================*/
+QPlainTextEdit,
+QPlainTextEdit:focus {
+    color: #F0F0F0;
+}
+
+
+/*==================================================================================================
+TABBAR widget (3rd party plugin)
+==================================================================================================*/
+QToolBar:horizontal#Selector,
+QToolBar:vertical#Selector {
+    background-color: rgba(0,0,0,120);
+    margin: 0px;
+    padding: 0px;
+}
+
+QToolBar::handle:top#Selector,
+QToolBar::handle:bottom#Selector,
+QToolBar::handle:horizontal#Selector {
+    alignment: bottom left;
+}
+
+QToolBar::handle:left#Selector,
+QToolBar::handle:right#Selector,
+QToolBar::handle:vertical#Selector {
+    width: 100%;
+    alignment: center left;
+}
+
+QToolBar:top#Selector QToolButton,
+QToolBar:bottom#Selector QToolButton,
+QToolBar:horizontal#Selector QToolButton {
+    alignment: bottom left;
+}
+
+QToolBar:left#Selector QToolButton,
+QToolBar:right#Selector QToolButton,
+QToolBar:vertical#Selector QToolButton {
+    alignment: center left;
+}
+
+QToolButton[toolbar_orientation="horizontal"] {
+    /* nothing, when Horizontal there's no need to add special parameters */
+}
+
+QToolButton[toolbar_orientation="vertical"] {
+    width: 100%;
+}
+
+QToolBar#Selector QToolButton {
+    border: none;
+    margin: 0px;
+    padding: 2px 6px;
+    border-radius: 0px;
+}
+
+/* Active tab */
+QToolBar#Selector QToolButton:checked {
+    color: #F0F0F0;
+    background-color: #2F333D;
+}
+
+/* Unactive tabs */
+QToolBar#Selector QToolButton:!checked {
+    color: rgba(255,255,255,160);
+    background-color: transparent;
+    margin: 0px;
+}
+
+/* Unactive tabs (hover) */
+QToolBar#Selector QToolButton:!checked:hover {
+    color: rgba(255,255,255,255);
+    background-color: rgba(255,255,255,20);
+}
+
+/* Unactive tabs (pressed) */
+QToolBar#Selector QToolButton:!checked:pressed {
+    background-color: rgba(255,255,255,40);
+}
+
+
+/*==================================================================================================
+EXPERIMENTAL
+==================================================================================================*/
+
+/* Fix for preventing elements in different rows to accidentally overlap */
+QDialog QGroupBox QFrame {
+    margin: 2px 0px;
+}
+
+*[mandatoryField="true"] { background-color: cyan }
+
+/* Hack to avoid QPushButton text partially hidden under menu-indicator */
+QPushButton#NavigationIndicator::menu-indicator {
+    image: none;
+    width: 0px;
+}
+
+QToolBar QToolButton[popupMode="1"] {
+    width: 100px;
+    background: red;
+}

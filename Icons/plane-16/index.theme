@@ -1,0 +1,11 @@
+[Icon Theme]
+Name=Plane
+Comment=Plane icon theme pack
+Inherits=Plane,Adwaita,gnome,hicolor
+Directories=scalable
+
+[scalable]
+Size=32
+Type=Scalable
+MinSize=1
+MaxSize=256
