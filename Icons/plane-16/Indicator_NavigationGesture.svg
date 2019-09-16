@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   id="svg2"
+   height="64"
+   viewBox="0 0 64 64"
+   width="64"
+   version="1.1"
+   sodipodi:docname="Indicator_NavigationGesture.svg"
+   inkscape:version="0.92.4 5da689c313, 2019-01-14">
+  <defs
+     id="defs14" />
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="640"
+     inkscape:window-height="480"
+     id="namedview12"
+     showgrid="false"
+     inkscape:zoom="10.3125"
+     inkscape:cx="36.072727"
+     inkscape:cy="28.993939"
+     inkscape:current-layer="layer1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     transform="translate(0,-988.36)">
+    <circle
+       id="ellipse8166"
+       transform="rotate(74.789)"
+       cy="214.74001"
+       cx="980.37"
+       style="fill:#afafaf;fill-opacity:1"
+       r="12" />
+    <path
+       id="path4268"
+       style="color:#000000;fill:none;stroke-width:0"
+       d="M 28.48,1042.5 A 17.03,17.03 0 0 1 16.438,1037.512 17.03,17.03 0 0 1 11.45,1025.47"
+       inkscape:connector-curvature="0" />
+    <g
+       id="g8"
+       style="fill:#2e3436">
+      <circle
+         id="circle4270"
+         transform="rotate(74.789)"
+         cy="258.92999"
+         cx="1005.7"
+         r="12"
+         style="font-variant-east_asian:normal;opacity:1;vector-effect:none;fill:#afafaf;fill-opacity:1;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         id="path8184"
+         style="color:#000000;font-variant-ligatures:none;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;shape-padding:0;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;font-variant-east_asian:normal;opacity:1;vector-effect:none;fill:#afafaf;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 31.98,2.0273 v 0.002 c -7.595,0.005 -15.19,2.8617 -21,8.5667 a 5.0005,5.0005 0 1 0 7.006,7.134 c 5.495,-5.395 13.24,-6.984 20.076,-4.796 a 12,12 74.789 0 1 5.09,-8.7738 C 39.577,2.7369 35.778,2.0248 31.98,2.0273 Z"
+         transform="translate(0,988.36)"
+         inkscape:connector-curvature="0" />
+      <path
+         id="circle8192"
+         style="color:#000000;font-variant-ligatures:none;font-variant-position:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-alternates:normal;font-feature-settings:normal;text-indent:0;text-decoration:none;text-decoration-line:none;text-decoration-style:solid;text-decoration-color:#000000;text-transform:none;white-space:normal;shape-padding:0;isolation:auto;mix-blend-mode:normal;solid-color:#000000;fill-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;font-variant-east_asian:normal;opacity:1;vector-effect:none;fill:#afafaf;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 49.529,44.699 a 5.0005,5.0005 0 0 0 -3.443,1.5 c -5.495,5.451 -13.279,7.064 -20.148,4.865 a 12,12 74.789 0 1 -5.088,8.774 c 10.777,4.287 23.568,2.101 32.279,-6.541 a 5.0005,5.0005 0 0 0 -3.6,-8.598 z"
+         transform="translate(0,988.36)"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+</svg>

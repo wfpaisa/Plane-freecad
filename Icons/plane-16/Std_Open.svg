@@ -31,29 +31,9 @@
     <linearGradient
        inkscape:collect="always"
        xlink:href="#default_color"
-       id="linearGradient8185"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.66666663,0,0,0.66666667,50.847589,96.000001)"
-       x1="-153.4238"
-       y1="-84"
-       x2="-129.4238"
-       y2="-84" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#default_color"
        id="linearGradient1005"
        gradientUnits="userSpaceOnUse"
        gradientTransform="matrix(0.66666663,0,0,0.66666667,-21.152411,-7.9999992)"
-       x1="-153.4238"
-       y1="-84"
-       x2="-129.4238"
-       y2="-84" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#default_color"
-       id="linearGradient841"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(0.66666663,0,0,0.66666667,50.847589,96.000001)"
        x1="-153.4238"
        y1="-84"
        x2="-129.4238"
@@ -65,7 +45,7 @@
      showguides="true"
      inkscape:zoom="44.055691"
      inkscape:grid-bbox="true"
-     inkscape:cx="11.780453"
+     inkscape:cx="-0.90803209"
      inkscape:window-height="1003"
      pagecolor="#2f333d"
      bordercolor="#666666"
@@ -84,7 +64,7 @@
      borderopacity="1.0"
      inkscape:pageshadow="2"
      inkscape:snap-center="false"
-     inkscape:cy="6.7249086"
+     inkscape:cy="6.1801435"
      inkscape:window-width="1920"
      inkscape:window-x="-9"
      inkscape:snap-to-guides="false"
@@ -302,8 +282,8 @@ black 373e48ff /grey 939dacff /orange fe8a01ff /red d40000ff
      inkscape:groupmode="layer"
      transform="translate(0,-32)">
     <path
-       style="display:inline;opacity:0.8;vector-effect:none;fill:url(#linearGradient841);fill-opacity:1;stroke:none;stroke-width:0.13666186;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:fill markers stroke;enable-background:new"
-       d="m 0,33 v 13 l 1,1 h 14 l 1,-1 V 36 L 15,35 H 9 L 7,33 Z m 9,3 h 6 V 46 H 1 v -9 h 6 z"
+       style="display:inline;opacity:1;vector-effect:none;fill:#afafaf;fill-opacity:1;stroke:none;stroke-width:0.13666186;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:fill markers stroke;enable-background:new"
+       d="m 0,33 v 12 l 1,1 h 13 l 1,-1 V 36 L 14,35 H 9 L 7,33 Z m 9,3 h 5 v 9 H 1 v -8 h 6 z"
        id="path7809"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccccccccccccccccc" />
@@ -311,8 +291,8 @@ black 373e48ff /grey 939dacff /orange fe8a01ff /red d40000ff
        sodipodi:nodetypes="ccccccc"
        inkscape:connector-curvature="0"
        id="path7811"
-       d="m 2,38 v 7 l 12,-1e-5 V 37 H 9 l -2,1 z"
-       style="display:inline;opacity:0.16000001;vector-effect:none;fill:url(#linearGradient8185);fill-opacity:1;stroke:none;stroke-width:0.13666186;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:fill markers stroke;enable-background:new"
+       d="m 2,38 v 6 l 11,-1e-5 V 37 H 9 l -2,1 z"
+       style="display:inline;opacity:0.8;vector-effect:none;fill:#007eff;fill-opacity:1;stroke:none;stroke-width:0.13666186;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;marker:none;marker-start:none;marker-mid:none;marker-end:none;paint-order:fill markers stroke;enable-background:new"
        inkscape:label="path7811" />
   </g>
 </svg>
